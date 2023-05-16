@@ -48,6 +48,7 @@ class Server:
         return self.dataset()[offset:limit]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[]:
+        '''Returns: a dictionary'''
         data = self.get_page(page, page_size)
         total_data = len(self.dataset())
         start_index, end_index = index_range(page + 1, page_size)
