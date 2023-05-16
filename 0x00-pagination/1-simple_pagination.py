@@ -36,6 +36,10 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        '''use index_range to find the correct indexes to
+        paginate the dataset correctly and return the appropriate
+        page of the dataset (i.e. the correct list of rows)
+        '''
         assert type(page) == int and page > 0
         assert type(page_size) == int and page > 0
 
