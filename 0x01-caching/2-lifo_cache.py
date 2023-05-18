@@ -7,7 +7,7 @@ from base_caching import BaseCaching
 
 class LIFOCache(BaseCaching):
     '''FIFOCache inherits from the BaseCaching class'''
-    
+
     def __init__(self):
         '''Initialize'''
         super().__init__()

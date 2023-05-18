@@ -7,13 +7,13 @@ from base_caching import BaseCaching
 
 class LRUCache(BaseCaching):
     '''LRUCache inherits from the BaseCaching class'''
-    
+
     def __init__(self):
         '''Initialize'''
         super().__init__()
 
-        # a queue that tracks the use time of items
-        # the least recntly used item is removed first
+        #  a queue that tracks the use time of items
+        #  the least recntly used item is removed first
         self.queue = []
 
     def put(self, key, item):
@@ -44,7 +44,7 @@ class LRUCache(BaseCaching):
 
         # reading an item means it is the most recently used
         # the item is added to the end of the queue
-        index = self.queue.index(key) # gets the index of the MRU item
+        index = self.queue.index(key)  # gets the index of the MRU item
         self.queue.pop(index)
         self.queue.append(key)
 

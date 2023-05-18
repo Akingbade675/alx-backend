@@ -7,7 +7,7 @@ from base_caching import BaseCaching
 
 class MRUCache(BaseCaching):
     '''MRUCache inherits from the BaseCaching class'''
-    
+
     def __init__(self):
         '''Initialize'''
         super().__init__()
@@ -44,7 +44,7 @@ class MRUCache(BaseCaching):
 
         # reading an item means it is the most recently used
         # the item is added to the end of the queue
-        index = self.queue.index(key) # gets the index of the MRU item
+        index = self.queue.index(key)  # gets the index of the MRU item
         self.queue.pop(index)
         self.queue.append(key)
 
