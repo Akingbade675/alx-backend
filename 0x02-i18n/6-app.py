@@ -6,6 +6,7 @@ from flask import (Flask, render_template, request, g)
 from flask_babel import Babel
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 
 
 class Config():
