@@ -28,15 +28,11 @@ users = {
 }
 
 
-
-
 def get_user():
     '''get logged in user'''
-
-    login_id = int(request.args.get('login_as'))
-    user = users.get(login_id)
-    if user:
-        return user
+    login_id = request.args.get('login_as')
+    if login_id:
+        return users.get(int(login_id))
     return None
 
 
